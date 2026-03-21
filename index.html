@@ -597,7 +597,7 @@ function updateCountdown(){
   const target=new Date('2025-04-19T12:00:00-04:00').getTime();
   const now=Date.now();
   const diff=target-now;
-  if(diff<=0){document.getElementById('countdown').innerHTML='<div style="grid-column:span 4;text-align:center;font-family:var(--display);font-size:clamp(24px,3vw,36px);color:var(--lime)">EVENT DAY IS HERE!</div>';return}
+  if(diff<=0){document.getElementById('countdown').innerHTML='<div style="grid-column:span 4;text-align:center;font-family:var(--display);font-size:clamp(24px,3vw,36px);color:var(--lime)">New events coming soon.</div>';return}
   const d=Math.floor(diff/(1000*60*60*24));
   const h=Math.floor((diff%(1000*60*60*24))/(1000*60*60));
   const m=Math.floor((diff%(1000*60*60))/(1000*60));

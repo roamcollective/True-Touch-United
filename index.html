@@ -171,6 +171,8 @@ button{cursor:pointer;border:none;background:none;font-family:var(--body)}
 .event-info-side h3{font-family:var(--display);font-size:clamp(22px,2.5vw,30px);text-transform:uppercase;margin-bottom:16px;letter-spacing:-1px;line-height:1.15}
 .event-info-side .ev-meta{font-size:14px;color:var(--gray-500);line-height:2.2}
 .event-info-side .ev-meta .row{display:flex;align-items:center;gap:10px}
+.event-flyer{margin-top:16px;margin-bottom:16px;border-radius:24px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,.25);display:none}
+.event-flyer img{width:100%;display:block}
 
 /* === CTA BLOCK === */
 .cta-block{position:relative;overflow:hidden;border-radius:32px;padding:clamp(50px,8vw,90px) clamp(40px,6vw,80px);display:flex;align-items:center;justify-content:space-between;gap:40px}
@@ -236,6 +238,7 @@ button{cursor:pointer;border:none;background:none;font-family:var(--body)}
   .mission-row{grid-template-columns:1fr}
   .init-grid{grid-template-columns:1fr}
   .event-mega-card{grid-template-columns:1fr}
+  .event-flyer{display:block}
   .cta-block{flex-direction:column;text-align:center}
   .hero-stat-float{display:none}
   .stats-band{grid-template-columns:repeat(2,1fr)}
@@ -439,6 +442,9 @@ input,select,textarea{font-size:16px!important}
         <div class="ed-yr">2 0 2 6</div>
       </div>
       <div class="event-info-side">
+        <div class="event-flyer">
+          <img src="images/launch-event-flyer.jpg" alt="TrueTouch United Launch Event flyer — Sunday, April 19, 1:00–5:00 PM at The Ospreys at Belmont Bay, 401 Belmont Bay Dr, Woodbridge, VA 22191. Free community event with food trucks, live music, family fun, games, raffle prizes, and giveaways.">
+        </div>
         <div class="ev-type">Launch Event</div>
         <h3>TrueTouch United Launch Event</h3>
         <div class="ev-meta">

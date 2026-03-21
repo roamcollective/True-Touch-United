@@ -436,13 +436,13 @@ input,select,textarea{font-size:16px!important}
       <div class="event-date-side">
         <div class="ed-mo">April</div>
         <div class="ed-day">19</div>
-        <div class="ed-yr">2 0 2 5</div>
+        <div class="ed-yr">2 0 2 6</div>
       </div>
       <div class="event-info-side">
         <div class="ev-type">Community Event</div>
         <h3>Community Launch Event</h3>
         <div class="ev-meta">
-          <div class="row">🕐 &nbsp;Time TBD</div>
+          <div class="row">🕐 &nbsp;Sunday, April 19 · 1–5 PM</div>
           <div class="row">📍 &nbsp;401 Belmont Bay Dr, Woodbridge, VA 22191</div>
         </div>
         <div style="display:flex;gap:12px;margin-top:24px;flex-wrap:wrap">
@@ -594,7 +594,7 @@ document.querySelectorAll('[data-count]').forEach(el=>{
 
 // Countdown timer to April 19, 2025
 function updateCountdown(){
-  const target=new Date('2025-04-19T12:00:00-04:00').getTime();
+  const target=new Date('2026-04-19T13:00:00-04:00').getTime();
   const now=Date.now();
   const diff=target-now;
   if(diff<=0){document.getElementById('countdown').innerHTML='<div style="grid-column:span 4;text-align:center;font-family:var(--display);font-size:clamp(24px,3vw,36px);color:var(--lime)">New events coming soon.</div>';return}

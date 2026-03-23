@@ -154,7 +154,6 @@
 .lightbox-close:hover{background:rgba(255,255,255,.2)}
 .lightbox-content{max-width:90vw;max-height:80vh;border-radius:24px;display:flex;align-items:center;justify-content:center;padding:0}
 .lightbox-content img{max-width:90vw;max-height:80vh;border-radius:24px;display:block}
-.lightbox-caption{font-family:var(--display);font-size:20px;text-transform:uppercase;color:#fff;letter-spacing:1px;text-align:center}
 .lightbox-nav{display:flex;gap:12px;position:absolute;bottom:32px}
 .lightbox-nav button{width:48px;height:48px;border-radius:50%;background:rgba(255,255,255,.1);color:#fff;font-size:20px;display:flex;align-items:center;justify-content:center;transition:background .3s;border:none;cursor:pointer}
 .lightbox-nav button:hover{background:var(--lime);color:var(--black)}
@@ -184,7 +183,6 @@ input,select,textarea{font-size:16px!important}
 <div class="lightbox" id="lightbox">
   <div class="lightbox-close" onclick="closeLightbox()">✕</div>
   <div class="lightbox-content" id="lb-content"></div>
-  <div class="lightbox-caption" id="lb-caption">Photo</div>
   <div class="lightbox-nav">
     <button onclick="navLightbox(-1)">←</button>
     <button onclick="navLightbox(1)">→</button>
@@ -212,7 +210,6 @@ function renderLightbox(el){
   const caption=el.dataset.caption||(capEl?capEl.textContent.trim():'Photo');
   const lbContent=document.getElementById('lb-content');
   lbContent.innerHTML=full?`<img src="${full}" alt="${caption}">`:'';
-  document.getElementById('lb-caption').textContent=caption;
 }
 function openLightbox(el){
   lbIdx=galleryItems.indexOf(el);

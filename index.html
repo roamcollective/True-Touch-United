@@ -129,9 +129,9 @@ button{cursor:pointer;border:none;background:none;font-family:var(--body)}
 /* === MISSION — EDITORIAL ASYMMETRIC === */
 .mission-row{display:grid;grid-template-columns:1fr 1fr;gap:clamp(40px,6vw,80px);align-items:center}
 .mission-visual{position:relative;height:clamp(400px,50vw,640px);border-radius:24px;overflow:hidden;background:var(--gray-100)}
-.mission-visual .overlay-gradient{position:absolute;inset:0;background:linear-gradient(135deg,rgba(198,241,53,.15),rgba(29,185,84,.08));z-index:1}
-.mission-visual .center-emoji{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-size:clamp(80px,12vw,160px);z-index:2;filter:drop-shadow(0 20px 40px rgba(0,0,0,.1))}
-.mission-visual .field-lines{position:absolute;inset:0;opacity:.06;
+.mission-visual .mission-photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;filter:saturate(1.1);z-index:0}
+.mission-visual .overlay-gradient{position:absolute;inset:0;background:linear-gradient(135deg,rgba(198,241,53,.15),rgba(29,185,84,.08));z-index:2}
+.mission-visual .field-lines{position:absolute;inset:0;opacity:.06;z-index:1;
   background-image:repeating-linear-gradient(0deg,transparent,transparent 39px,rgba(0,0,0,.4) 39px,rgba(0,0,0,.4) 40px),
   repeating-linear-gradient(90deg,transparent,transparent 39px,rgba(0,0,0,.4) 39px,rgba(0,0,0,.4) 40px)}
 .mission-text h2{margin-bottom:28px}
@@ -377,9 +377,9 @@ input,select,textarea{font-size:16px!important}
         <a href="about.html" class="btn btn-dark btn-md" style="margin-top:28px">Our Story <span class="arr">→</span></a>
       </div>
       <div class="mission-visual rr">
+        <img src="images/ttu-founders.jpg" alt="TrueTouch United coaches standing together at the cage pitch" class="mission-photo" loading="lazy">
         <div class="field-lines"></div>
         <div class="overlay-gradient"></div>
-        <div class="center-emoji">⚽</div>
       </div>
     </div>
     <div class="pull-quote r">

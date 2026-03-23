@@ -44,13 +44,11 @@ button{cursor:pointer;border:none;background:none;font-family:var(--body)}
 .nav-logo{font-family:var(--display);font-size:15px;letter-spacing:-.3px;display:flex;align-items:center;gap:10px}
 .logo-mark{width:36px;height:36px;background:var(--lime);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:18px;transform:rotate(-4deg);transition:transform .3s var(--ease)}
 .nav-logo:hover .logo-mark{transform:rotate(0) scale(1.08)}
-.nav-links{display:flex;align-items:center;gap:6px}
+.nav-links{display:flex;align-items:center;gap:6px;flex-wrap:wrap}
 .nav-links a{font-size:13px;font-weight:600;padding:8px 16px;border-radius:8px;transition:all .3s var(--ease);opacity:.7}
 .nav-links a:hover,.nav-links a.active{opacity:1}
 .nav-cta-btn{background:var(--lime)!important;color:var(--black)!important;font-weight:800!important;padding:10px 24px!important;border-radius:100px!important;opacity:1!important;transition:all .3s var(--ease)!important}
 .nav-cta-btn:hover{background:var(--lime-dark)!important;transform:translateY(-1px);box-shadow:0 4px 20px rgba(198,241,53,.3)}
-.burger{display:none;flex-direction:column;gap:5px;padding:8px}
-.burger span{width:22px;height:2px;background:currentColor;border-radius:1px;transition:all .3s}
 
 /* === HERO === */
 .hero{min-height:100vh;background:var(--black);position:relative;display:flex;align-items:flex-end;overflow:hidden;padding:0 0 clamp(60px,8vw,100px)}
@@ -233,8 +231,6 @@ button{cursor:pointer;border:none;background:none;font-family:var(--body)}
 
 /* === RESPONSIVE === */
 @media(max-width:1024px){
-  .nav-links{display:none}.burger{display:flex}
-  .nav-links.open{display:flex;flex-direction:column;position:absolute;top:72px;left:0;right:0;background:var(--white);padding:16px;border-bottom:1px solid var(--gray-200);gap:2px;color:var(--gray-900)}
   .mission-row{grid-template-columns:1fr}
   .init-grid{grid-template-columns:1fr}
   .event-mega-card{grid-template-columns:1fr}
@@ -303,8 +299,7 @@ button{cursor:pointer;border:none;background:none;font-family:var(--body)}
   #calc-slider{height:12px!important}
 }
 /* Touch target accessibility */
-.nav-links a,.btn,.sr-card,.soc-card,.ev-action .btn,.ft-links a,.ft-socials a,.burger,.tier,.way-card,.sup-card,.photo-item{min-height:44px}
-.burger{min-width:44px;min-height:44px;display:flex;justify-content:center;align-items:center}
+.nav-links a,.btn,.sr-card,.soc-card,.ev-action .btn,.ft-links a,.ft-socials a,.tier,.way-card,.sup-card,.photo-item{min-height:44px}
 /* Tap highlight */
 a,button{-webkit-tap-highlight-color:rgba(198,241,53,.15)}
 /* Prevent horizontal scroll */
@@ -334,7 +329,6 @@ input,select,textarea{font-size:16px!important}
       <a href="contact.html">Contact</a>
       <a href="donate.html" class="nav-cta-btn">Donate</a>
     </div>
-    <div class="burger" onclick="document.getElementById('navLinks').classList.toggle('open')"><span></span><span></span><span></span></div>
   </div>
 </nav>
 

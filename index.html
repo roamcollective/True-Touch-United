@@ -57,6 +57,23 @@ button{cursor:pointer;border:none;background:none;font-family:var(--body)}
 .hero-pattern{position:absolute;inset:0;z-index:0;opacity:.08;
   background-image:repeating-linear-gradient(0deg,transparent,transparent 79px,rgba(255,255,255,.3) 79px,rgba(255,255,255,.3) 80px),
   repeating-linear-gradient(90deg,transparent,transparent 79px,rgba(255,255,255,.3) 79px,rgba(255,255,255,.3) 80px)}
+
+/* Floating soccer balls in hero */
+.hero-balls{position:absolute;inset:0;pointer-events:none;z-index:2;overflow:hidden}
+.hero-ball{position:absolute;width:52px;height:52px;border-radius:50%;background:radial-gradient(circle at 30% 30%,#ffffff, #e5e7eb 55%, #111827 56%, #111827 100%);
+  box-shadow:0 14px 30px rgba(0,0,0,.45);opacity:.65;animation:floatBall 18s linear infinite}
+.hero-ball::after{content:'';position:absolute;inset:12px;border-radius:50%;background:
+  radial-gradient(circle at 30% 30%, #111827 0, #111827 14px, transparent 15px),
+  radial-gradient(circle at 70% 70%, #111827 0, #111827 12px, transparent 13px),
+  radial-gradient(circle at 30% 75%, #111827 0, #111827 10px, transparent 11px);
+  mix-blend-mode:multiply;opacity:.85}
+.hero-ball.b1{top:14%;left:12%;animation-duration:22s;animation-delay:-4s}
+.hero-ball.b2{top:26%;right:10%;animation-duration:19s;animation-delay:-9s}
+.hero-ball.b3{bottom:20%;left:24%;animation-duration:24s;animation-delay:-2s}
+.hero-ball.b4{bottom:30%;right:22%;animation-duration:21s;animation-delay:-6s}
+@keyframes floatBall{0%{transform:translate3d(0,0,0) rotate(0deg)}25%{transform:translate3d(30px,-40px,0) rotate(15deg)}50%{transform:translate3d(-10px,-70px,0) rotate(-10deg)}75%{transform:translate3d(20px,-40px,0) rotate(8deg)}100%{transform:translate3d(0,0,0) rotate(0deg)}}
+@media(max-width:768px){.hero-ball{width:38px;height:38px;opacity:.5}}
+@media(max-width:480px){.hero-balls{opacity:.4}}
 /* Animated soccer field half circle */
 .hero-field-arc{position:absolute;bottom:-200px;left:50%;transform:translateX(-50%);width:800px;height:800px;border:1px solid rgba(198,241,53,.08);border-radius:50%;z-index:0}
 .hero-field-arc::after{content:'';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:16px;height:16px;background:rgba(198,241,53,.12);border-radius:50%}

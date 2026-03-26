@@ -234,10 +234,12 @@ button{cursor:pointer;border:none;background:none;font-family:var(--body)}
 .ft-col a:hover{color:var(--lime);transform:translateX(4px)}
 .ft-col .cl{display:flex;align-items:flex-start;gap:10px;padding:6px 0;color:var(--gray-500);font-size:13px;line-height:1.6}
 .ft-col .cl .cli{width:30px;height:30px;background:var(--gray-800);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:13px;flex-shrink:0}
-.ft-bottom{border-top:1px solid rgba(255,255,255,.06);padding:18px 0;display:flex;justify-content:space-between;align-items:center;font-size:11px;color:var(--gray-600)}
+.ft-bottom{border-top:1px solid rgba(255,255,255,.06);padding:18px 0;display:flex;justify-content:space-between;align-items:center;font-size:11px;color:var(--gray-600);gap:16px;flex-wrap:wrap}
 .ft-bottom a{color:var(--gray-600);transition:color .3s}
 .ft-bottom a:hover{color:var(--lime)}
 .ft-bot-links{display:flex;gap:20px}
+.ft-built{color:var(--gray-500);font-weight:600}
+@media(max-width:768px){.ft-bottom{flex-direction:column;align-items:flex-start}}
 
 /* === ANIMATIONS === */
 .r{opacity:0;transform:translateY(50px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
@@ -617,6 +619,7 @@ input,select,textarea{font-size:16px!important}
   </div></div></div>
   <div class="contain"><div class="ft-bottom">
     <span>© 2025 TrueTouch United. All rights reserved.</span>
+    <span class="ft-built">Built &amp; Powered by Roam.</span>
     <div class="ft-bot-links"><a href="#">Privacy</a><a href="#">Terms</a><a href="#">Accessibility</a></div>
   </div></div>
 </footer>

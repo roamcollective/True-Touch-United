@@ -142,23 +142,6 @@
     color:#000!important
   }
 }
-
-
-.sponsor-row{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;margin-top:28px}
-.sponsor-pill{border:1px solid rgba(255,255,255,.12);background:linear-gradient(180deg,rgba(255,255,255,.06),rgba(255,255,255,.02));padding:28px;border-radius:20px;font-weight:800;font-size:clamp(22px,3vw,32px);text-align:center;letter-spacing:-.03em}
-.gallery-hero-note{display:inline-flex;align-items:center;gap:10px;padding:10px 16px;border-radius:999px;background:rgba(190,242,100,.12);border:1px solid rgba(190,242,100,.25);color:var(--lime);font-size:13px;font-weight:700;margin-top:20px}
-.photo-grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:18px}
-.gallery-card{grid-column:span 4;position:relative;overflow:hidden;border-radius:24px;min-height:280px;background:#111}
-.gallery-card.tall{grid-row:span 2;min-height:578px}
-.gallery-card.wide{grid-column:span 8}
-.gallery-card img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s ease,filter .4s ease}
-.gallery-card:hover img{transform:scale(1.04);filter:saturate(1.05)}
-.gallery-card .gallery-overlay{position:absolute;left:0;right:0;bottom:0;padding:22px;background:linear-gradient(180deg,transparent,rgba(0,0,0,.8));color:#fff}
-.gallery-card .gallery-overlay h3{margin:0 0 6px;font-size:22px}
-.gallery-card .gallery-overlay p{margin:0;color:rgba(255,255,255,.82);font-size:14px;line-height:1.5}
-@media (max-width:900px){.photo-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.gallery-card,.gallery-card.wide{grid-column:span 1;min-height:240px}.gallery-card.tall{grid-row:span 1;min-height:320px}.sponsor-row{grid-template-columns:1fr}}
-@media (max-width:640px){.photo-grid{grid-template-columns:1fr;gap:14px}.gallery-card,.gallery-card.wide,.gallery-card.tall{grid-column:span 1;min-height:260px}}
-
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Gallery & Media — TrueTouch United","description":"Photos and videos from TrueTouch United youth soccer events in Woodbridge, Virginia.","url":"https://www.truetouchunited.com/gallery.html"}</script>
 </head>
@@ -195,8 +178,8 @@
         <figcaption>Family support on the touchline</figcaption>
         <span class="expand-hint">Tap to zoom</span>
       </figure>
-      <figure class="gallery-card" onclick="openLightbox(this)" data-full="images/Truetouchlogo.jpg" data-caption="Coach Jose demoing first touches">
-        <div class="gallery-media"><img src="images/Truetouchlogo.jpg" alt="Coach Jose demoing first-touch technique for the group" loading="lazy"></div>
+      <figure class="gallery-card" onclick="openLightbox(this)" data-full="images/ttu-5.jpg" data-caption="Coach Jose demoing first touches">
+        <div class="gallery-media"><img src="images/ttu-5.jpg" alt="Coach Jose demoing first-touch technique for the group" loading="lazy"></div>
         <figcaption>Coach Jose on first-touch detail</figcaption>
         <span class="expand-hint">Tap to zoom</span>
       </figure>

@@ -40,6 +40,18 @@ html{scroll-behavior:smooth}body{font-family:var(--body);background:var(--white)
 .mission-card{background:var(--white);border-radius:24px;padding:40px 36px;border:1px solid var(--gray-200)}
 .mission-card h3{font-family:var(--display);font-size:18px;text-transform:uppercase;margin-bottom:12px;letter-spacing:-.3px}
 .mission-card p{font-size:15px;color:var(--gray-600);line-height:1.9;margin-bottom:12px}
+.donate-lead{font-size:18px;color:var(--gray-700);line-height:1.75;margin-bottom:22px;font-weight:600;max-width:58ch}
+.donate-points{display:grid;gap:14px;margin:0 0 22px}
+.donate-point{display:flex;align-items:flex-start;gap:12px;padding:16px 18px;background:var(--gray-50);border:1px solid var(--gray-200);border-radius:18px;color:var(--gray-700);line-height:1.7}
+.dp-icon{width:26px;height:26px;border-radius:50%;background:rgba(29,185,84,.12);color:var(--green);display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:800;flex:0 0 26px;margin-top:2px}
+.donate-support-copy{font-size:15px;color:var(--gray-600);line-height:1.9;max-width:58ch}
+.donate-cta-card{background:linear-gradient(180deg,#ffffff 0%,#f9fbf2 100%);box-shadow:0 20px 50px rgba(0,0,0,.06)}
+.donate-card-kicker{display:inline-flex;align-items:center;gap:8px;background:rgba(198,241,53,.18);color:var(--gray-900);font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:2px;padding:8px 12px;border-radius:999px;margin-bottom:14px}
+.promise-list{display:grid;gap:10px;margin:8px 0 0;padding:0;list-style:none}
+.promise-list li{position:relative;padding-left:18px;font-size:14px;color:var(--gray-600);line-height:1.7}
+.promise-list li::before{content:"•";position:absolute;left:0;top:0;color:var(--green);font-weight:800}
+.donate-trust-note{color:var(--gray-500)!important;font-size:13px!important;font-style:italic;margin:12px 0 0!important;line-height:1.7!important}
+.donate-fee-note{text-align:center;font-size:12px;color:var(--gray-500);font-weight:600}
 .where-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:40px}
 .where-item{background:var(--white);border-radius:20px;padding:32px 20px;text-align:center;border:1px solid var(--gray-200);transition:all .4s var(--ease)}
 .where-item:hover{transform:translateY(-6px);box-shadow:0 16px 40px rgba(0,0,0,.06);border-color:transparent}
@@ -55,7 +67,7 @@ html{scroll-behavior:smooth}body{font-family:var(--body);background:var(--white)
 .footer{background:var(--black);color:var(--white);padding:48px 0 24px}.ft-inner{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px}.ft-left{display:flex;align-items:center;gap:10px;font-family:var(--display);font-size:14px}.ft-links{display:flex;gap:24px}.ft-links a{font-size:12px;color:var(--gray-500);font-weight:600;transition:color .3s}.ft-links a:hover{color:var(--lime)}.ft-copy{font-size:11px;color:var(--gray-700);width:100%;text-align:center;margin-top:24px;padding-top:20px;border-top:1px solid rgba(255,255,255,.06)}.ft-socials{display:flex;gap:8px}.ft-socials a{width:36px;height:36px;border-radius:10px;background:var(--gray-800);display:flex;align-items:center;justify-content:center;transition:all .3s var(--ease)}.ft-socials a svg{width:14px;height:14px;fill:var(--gray-500);transition:fill .3s}.ft-socials a:hover{background:var(--lime);transform:translateY(-2px)}.ft-socials a:hover svg{fill:var(--black)}
 .r{opacity:0;transform:translateY(50px);transition:opacity .9s var(--ease),transform .9s var(--ease)}.r.v{opacity:1;transform:translateY(0)}.d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}.d4{transition-delay:.4s}
 @media(max-width:1024px){.where-grid{grid-template-columns:repeat(2,1fr)}.impact-grid{grid-template-columns:1fr}}
-@media(max-width:768px){.ft-inner{flex-direction:column;text-align:center}.ft-links{flex-wrap:wrap;justify-content:center}.where-grid{grid-template-columns:1fr}}
+@media(max-width:768px){.ft-inner{flex-direction:column;text-align:center}.ft-links{flex-wrap:wrap;justify-content:center}.where-grid{grid-template-columns:1fr}.donate-story-grid{grid-template-columns:1fr!important;gap:24px!important}.donate-sidebar{order:-1}.mission-card{padding:28px 22px!important;border-radius:22px!important}.donate-point{padding:14px 14px!important;border-radius:16px!important}.donate-lead{font-size:17px!important;line-height:1.65!important}.donate-support-copy{font-size:14px!important;line-height:1.8!important}.promise-list li{font-size:13px!important}.donate-fee-note{text-align:left!important}}
 @media(max-width:480px){.page-hero h1{font-size:42px!important}.sec-heading{font-size:32px!important}.contain{padding:0 16px!important}}
 
 /* === ENHANCED MOBILE OPTIMIZATION === */
@@ -186,22 +198,32 @@ input,select,textarea{font-size:16px!important}
 <!-- ABOUT THE CAUSE -->
 <section class="section-light">
 <div class="contain">
-<div style="display:grid;grid-template-columns:1fr 1fr;gap:clamp(40px,6vw,80px);align-items:start">
-<div class="r">
+<div class="donate-story-grid" style="display:grid;grid-template-columns:minmax(0,1.15fr) minmax(320px,.85fr);gap:clamp(32px,5vw,72px);align-items:start">
+<div class="r donate-copy">
 <div class="np-badge"><div class="check">✓</div>Registered 501(c)(3) Nonprofit</div>
 <div class="sec-heading" style="font-size:clamp(28px,4vw,48px)">Why Your<br>Donation <span class="outline">Matters</span></div>
-<p style="font-size:16px;color:var(--gray-600);line-height:1.9;margin-bottom:16px">In Woodbridge, Virginia, hundreds of kids want to play soccer but can't afford it. Registration fees, cleats, uniforms, shin guards — for families already stretched thin, these costs shut kids out of the game they love.</p>
-<p style="font-size:16px;color:var(--gray-600);line-height:1.9;margin-bottom:16px"><strong>TrueTouch United exists to change that.</strong> We're a grassroots nonprofit that covers 100% of the cost so every child can play — zero exceptions, zero cost to families.</p>
-<p style="font-size:16px;color:var(--gray-600);line-height:1.9">Your donation goes directly to the kids. No overhead bloat, no corporate salaries. Just soccer balls, cleats on feet, and smiles on faces.</p>
+<p class="donate-lead">Too many kids in Woodbridge want to play soccer but get priced out before they ever step on the field.</p>
+<div class="donate-points">
+  <div class="donate-point"><span class="dp-icon">✓</span><div><strong>Fees covered.</strong> Registration costs should never decide whether a child gets to play.</div></div>
+  <div class="donate-point"><span class="dp-icon">✓</span><div><strong>Gear included.</strong> Cleats, uniforms, shin guards, and equipment are often the real barrier.</div></div>
+  <div class="donate-point"><span class="dp-icon">✓</span><div><strong>100% access.</strong> TrueTouch United covers the full cost so families pay nothing.</div></div>
 </div>
-<div class="r d2" style="display:flex;flex-direction:column;gap:16px">
-<div class="mission-card">
+<p class="donate-support-copy">Your donation goes straight to the kids — not overhead bloat, not corporate salaries. Just real support that gets more children on the pitch.</p>
+</div>
+<div class="r d2 donate-sidebar" style="display:flex;flex-direction:column;gap:18px">
+<div class="mission-card donate-cta-card">
+<div class="donate-card-kicker">Give with confidence</div>
 <h3>Our Promise</h3>
-<p>Every dollar you donate goes directly toward removing financial barriers for youth soccer. We keep our operations lean and volunteer-driven so your money has maximum impact on the kids who need it most.</p>
-<p style="color:var(--gray-400);font-size:13px;font-style:italic;margin:0">TrueTouch United is a registered nonprofit organization. Donations may be tax-deductible to the fullest extent allowed by law.</p>
+<p>Every dollar you donate helps remove financial barriers for youth soccer. We stay lean, volunteer-driven, and focused on direct impact.</p>
+<ul class="promise-list">
+  <li>Direct support for youth soccer access</li>
+  <li>Volunteer-led, community-first model</li>
+  <li>Secure giving through Zeffy with zero platform fees</li>
+</ul>
+<a href="https://www.zeffy.com/en-US/donation-form/donate-to-help-kids-play-without-a-price" target="_blank" class="btn btn-lime btn-lg" style="width:100%;justify-content:center;margin-top:8px">Donate Now on Zeffy <span class="arr">→</span></a>
+<p class="donate-trust-note">TrueTouch United is a registered nonprofit organization. Donations may be tax-deductible to the fullest extent allowed by law.</p>
 </div>
-<a href="https://www.zeffy.com/en-US/donation-form/donate-to-help-kids-play-without-a-price" target="_blank" class="btn btn-lime btn-lg" style="width:100%;justify-content:center">Donate Now on Zeffy <span class="arr">→</span></a>
-<p style="text-align:center;font-size:12px;color:var(--gray-400)">100% goes to the kids — Zeffy charges zero platform fees</p>
+<p class="donate-fee-note">100% goes to the kids — Zeffy charges zero platform fees</p>
 </div>
 </div>
 </div>

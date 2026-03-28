@@ -423,6 +423,17 @@ input,select,textarea{font-size:16px!important}
   }
 }
 
+
+.hero-floaters{position:absolute;inset:0;pointer-events:none;overflow:hidden;z-index:0}
+.floater{position:absolute;display:flex;align-items:center;justify-content:center;opacity:.14;filter:saturate(.9);animation:floaty 10s ease-in-out infinite}
+.floater.ball{font-size:clamp(24px,3vw,42px)}
+.floater.logo{width:42px;height:42px;border-radius:50%;background:rgba(255,255,255,.05);backdrop-filter:blur(4px);border:1px solid rgba(255,255,255,.08);overflow:hidden}
+.floater.logo img{width:100%;height:100%;object-fit:cover}
+.f1{top:10%;left:7%;animation-delay:0s}.f2{top:18%;right:9%;animation-delay:1.2s}.f3{top:42%;left:4%;animation-delay:2.6s}.f4{top:54%;right:12%;animation-delay:3.3s}.f5{bottom:16%;left:12%;animation-delay:1.8s}.f6{bottom:10%;right:20%;animation-delay:4.1s}
+@keyframes floaty{0%,100%{transform:translateY(0) rotate(0deg)}50%{transform:translateY(-12px) rotate(4deg)}}
+.hero>*{position:relative;z-index:1}
+@media (max-width:768px){.floater{opacity:.1}.f3,.f6{display:none}.floater.ball{font-size:24px}.floater.logo{width:32px;height:32px}}
+
 </style>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"NonprofitOrganization","name":"TrueTouch United","description":"Youth soccer nonprofit empowering kids in Woodbridge, Virginia through free programs.","url":"https://www.truetouchunited.com","email":"Truetouchunited@gmail.com","address":{"@type":"PostalAddress","addressLocality":"Woodbridge","addressRegion":"VA","addressCountry":"US"},"sameAs":["https://www.instagram.com/truetouchunited","https://www.facebook.com/61577004368306","https://www.tiktok.com/@truetouchunited"]}
@@ -447,7 +458,14 @@ input,select,textarea{font-size:16px!important}
 </nav>
 
 <!-- HERO -->
-<section class="hero">
+<section class="hero"><div class="hero-floaters" aria-hidden="true">
+  <div class="floater ball f1">⚽</div>
+  <div class="floater logo f2"><img src="images/ttu-5.jpg" alt=""></div>
+  <div class="floater ball f3">⚽</div>
+  <div class="floater logo f4"><img src="images/ttu-5.jpg" alt=""></div>
+  <div class="floater ball f5">⚽</div>
+  <div class="floater logo f6"><img src="images/ttu-5.jpg" alt=""></div>
+</div>
   <div class="hero-bg">
     <div class="hero-pattern"></div>
     <div class="hero-field-arc"></div>

@@ -268,7 +268,6 @@ input,select,textarea{font-size:16px!important}
 <script>const nav=document.getElementById('mainNav');window.addEventListener('scroll',()=>{const y=window.scrollY;nav.classList.toggle('scrolled',y>80);if(y>document.querySelector('.page-hero').offsetHeight-100)nav.classList.remove('dark-mode');else nav.classList.add('dark-mode')},{passive:true});const obs=new IntersectionObserver(e=>{e.forEach(en=>{if(en.isIntersecting){en.target.classList.add('v');obs.unobserve(en.target)}})},{threshold:.08,rootMargin:'0px 0px -40px 0px'});document.querySelectorAll('.r').forEach(el=>obs.observe(el));</script>
 
 <script>
-// Hamburger menu toggle
 (function(){
   var btn=document.getElementById('burgerBtn');
   var links=document.getElementById('navLinks');

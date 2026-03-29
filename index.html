@@ -53,7 +53,8 @@ button{cursor:pointer;border:none;background:none;font-family:var(--body)}
 /* === HERO === */
 .hero{min-height:100vh;background:var(--black);position:relative;display:flex;align-items:flex-end;overflow:hidden;padding:0 0 clamp(60px,8vw,100px)}
 .hero-bg{position:absolute;inset:0;z-index:0}
-.hero-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(10,10,10,.95) 0%,rgba(10,10,10,.4) 40%,rgba(10,10,10,.2) 100%);z-index:1}
+.hero-bg-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top;z-index:0}
+.hero-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(to right,rgba(10,10,10,.95) 0%,rgba(10,10,10,.85) 40%,rgba(10,10,10,.4) 100%);z-index:1}
 .hero-pattern{position:absolute;inset:0;z-index:0;opacity:.08;
   background-image:repeating-linear-gradient(0deg,transparent,transparent 79px,rgba(255,255,255,.3) 79px,rgba(255,255,255,.3) 80px),
   repeating-linear-gradient(90deg,transparent,transparent 79px,rgba(255,255,255,.3) 79px,rgba(255,255,255,.3) 80px)}
@@ -467,6 +468,7 @@ input,select,textarea{font-size:16px!important}
   <div class="floater logo f6"><img src="images/Truetouchlogo.jpg" alt=""></div>
 </div>
   <div class="hero-bg">
+    <img src="images/hero-kids.png" alt="Kids playing soccer and high-fiving at golden hour" class="hero-bg-img">
     <div class="hero-pattern"></div>
     <div class="hero-field-arc"></div>
   </div>

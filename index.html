@@ -248,38 +248,80 @@ button{cursor:pointer;border:none;background:none;font-family:var(--body)}
   .hero-stat-float{display:none}
   .stats-band{grid-template-columns:repeat(2,1fr)}
   .ft-grid{grid-template-columns:1fr 1fr}
+  .section-dark,.section-dark-alt,.section-dark-mid{padding:clamp(60px,10vw,120px) 0}
 }
 @media(max-width:768px){
+  html,body{overflow-x:hidden}
   .burger{display:flex}
-  .nav-links{display:none;position:fixed;top:72px;left:0;right:0;bottom:0;background:rgba(10,10,10,.98);backdrop-filter:blur(20px);flex-direction:column;padding:8px 24px 40px;gap:0;z-index:9999;overflow-y:auto}
+  .nav-links{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(10,10,10,.98);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);flex-direction:column;padding:80px 24px 40px;gap:0;z-index:9999;overflow-y:auto}
   .nav-links.open{display:flex}
-  .nav-links a{padding:18px 0;opacity:1;font-size:17px;font-weight:700;border-bottom:1px solid rgba(255,255,255,.06);display:block;width:100%}
+  .nav-links a{padding:18px 0;opacity:1;font-size:17px;font-weight:700;border-bottom:1px solid rgba(255,255,255,.06);display:flex;width:100%;min-height:52px;align-items:center}
   .nav-links a:last-child{border-bottom:none}
-  .nav-links a.nav-cta-btn{margin-top:20px;text-align:center;padding:16px 24px;border-bottom:none}
+  .nav-links a.nav-cta-btn{margin-top:20px;text-align:center;padding:16px 24px;border-bottom:none;justify-content:center}
+  .hero{min-height:100svh;padding-bottom:clamp(40px,6vw,60px)}
+  .hero h1{font-size:clamp(2rem,7vw,4rem);word-break:break-word;letter-spacing:-2px}
+  .hero-sub{font-size:16px}
+  .hero-content{padding-top:90px}
+  .hero-actions{gap:10px}
+  .sec-heading{font-size:clamp(1.6rem,5vw,2.8rem);letter-spacing:-1px}
+  .sec-desc{font-size:15px}
+  .mission-text p{font-size:15px}
+  .mission-visual{height:300px}
+  .pull-quote{font-size:clamp(18px,5vw,28px);margin:40px 0;padding:28px 0}
+  .stat-cell{padding:16px 8px}
+  .stat-val{font-size:clamp(28px,8vw,44px)}
+  .stat-lbl{font-size:10px;letter-spacing:2px}
+  .init-card{padding:32px 24px}
+  .init-card .ic-icon{width:48px;height:48px;font-size:22px}
+  .event-date-side{padding:32px 24px}
+  .event-date-side .ed-day{font-size:56px}
+  .event-info-side{padding:28px 24px}
+  .cta-block{padding:clamp(36px,6vw,60px) clamp(24px,4vw,40px);border-radius:20px}
+  .cta-block .cta-copy h2{font-size:clamp(1.6rem,5vw,2.8rem)}
+  .cta-block .cta-btns{width:100%}
+  .cta-block .cta-btns .btn{width:100%;justify-content:center}
+  .btn-lg{padding:16px 32px;font-size:13px;min-height:48px}
+  .btn-md{padding:12px 24px;font-size:12px;min-height:48px}
   .ft-top-inner{flex-direction:column;text-align:center}
   .ft-nl{width:100%;flex-direction:column}
   .ft-nl input{width:100%}
+  .ft-nl button{width:100%;min-height:48px}
   .ft-grid{grid-template-columns:1fr;gap:28px}
   .ft-bottom{flex-direction:column;gap:10px;text-align:center}
-  .pull-quote{font-size:clamp(18px,5vw,28px)}
+  .ft-socials{gap:12px}
+  .ft-socials a{width:48px;height:48px}
+  .section-dark,.section-dark-alt,.section-dark-mid{padding:60px 0}
+  .marquee-track span{font-size:clamp(12px,3vw,16px)}
 }
 @media(max-width:480px){
-  .hero h1{font-size:42px!important;letter-spacing:-2px!important}
-  .sec-heading{font-size:32px!important;letter-spacing:-1px!important}
-  .btn-lg{padding:16px 32px;font-size:13px}
+  .hero h1{font-size:clamp(1.8rem,8vw,2.5rem)!important;letter-spacing:-1px!important}
+  .hero h1 .thin{font-size:.5em}
+  .sec-heading{font-size:clamp(1.4rem,6vw,1.8rem)!important;letter-spacing:-1px!important}
+  .btn-lg{padding:14px 24px;font-size:0.95rem;width:100%;justify-content:center}
+  .btn-md{padding:12px 20px;font-size:0.95rem;width:100%;justify-content:center}
   .hero-actions{flex-direction:column;width:100%}
   .hero-actions .btn{width:100%;justify-content:center}
   .contain{padding:0 16px!important}
-  .stats-band{grid-template-columns:repeat(2,1fr)!important}
-  .stat-val{font-size:32px!important}
+  .stats-band{grid-template-columns:repeat(2,1fr)!important;padding:32px 0}
+  .stat-val{font-size:28px!important}
+  .stat-lbl{font-size:9px;letter-spacing:2px}
   #countdown{grid-template-columns:repeat(2,1fr)!important;gap:10px!important}
   #countdown>div{padding:20px 12px!important}
+  #countdown>div>div:first-child{font-size:clamp(28px,8vw,40px)!important}
+  .init-card{padding:28px 16px}
+  .event-date-side .ed-day{font-size:44px}
+  .event-info-side{padding:20px 16px}
+  .cta-block{padding:28px 16px;border-radius:16px}
+  .mission-visual{height:240px}
+  .section-dark,.section-dark-alt,.section-dark-mid{padding:48px 0}
+  .ft-top{padding:32px 0}
+  .ft-main{padding:32px 0}
 }
 
 /* Touch targets */
 .nav-links a,.btn,.ft-socials a{min-height:48px;display:inline-flex;align-items:center}
 a,button{-webkit-tap-highlight-color:rgba(198,241,53,.15)}
-html{-webkit-overflow-scrolling:touch}
+html{-webkit-overflow-scrolling:touch;overflow-x:hidden}
 input,select,textarea{font-size:16px!important}
 @media(min-width:769px){input,select,textarea{font-size:14px!important}}
 </style>
